@@ -1,0 +1,8 @@
+[package]
+name = "gsudo"
+version = "0.1.0"
+authors = ["lucky"]
+edition = "2018"
+
+[dependencies]
+security-framework = { git = "https://github.com/kornelski/rust-security-framework", rev = "144d28621a2fb282aa9f177882eba51586a47e57" }

@@ -76,7 +76,7 @@ fn get_opts() -> Result<Opts> {
             _ => {}
         }
     }
-    if !opts.executable.starts_with("/") {
+    if !opts.executable.is_absolute() {
         exit_usage("absolute path required");
     }
     opts.args = argv.collect();
@@ -119,6 +119,6 @@ mod tests {
 
     #[test]
     fn exec_ls() {
-        exec("/bin/ls", &["-la"]).expect("ok")
+        assert!(exec("/bin/ls", &["-la"]).is_ok())
     }
 }

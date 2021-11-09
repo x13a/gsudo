@@ -118,6 +118,7 @@ mod tests {
     use super::*;
 
     #[test]
+    #[ignore]
     fn exec_ls() {
         assert!(exec("/bin/ls", &["-la"]).is_ok())
     }
